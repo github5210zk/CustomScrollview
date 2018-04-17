@@ -32,10 +32,12 @@ public class MainActivity extends Activity {
         topView = View.inflate(this, R.layout.top_view, null);
         mLin = (LinearLayout) topView.findViewById(R.id.mLin);
         adver = new AdverView(this);
+        //广告轮播
         mLin.addView(adver.getView());
         mSC.setTop(topView);
 
         adapter = new MyAdapter(this, list);
+        //设置Listview数据
         mSC.setAdapter(adapter);
 
     }
@@ -45,6 +47,4 @@ public class MainActivity extends Activity {
             list.add("第" + i + "条数据");
         }
     }
-
-
 }
